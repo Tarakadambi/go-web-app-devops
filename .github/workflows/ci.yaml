@@ -1,18 +1,17 @@
 name: CI
 
-on: 
+on:
  push:
-  branches:
+ branches:
    - main
-  paths-ignore:
+ paths-ignore:
    - README.md
-   - "helm/**"
 
 jobs:
- build: 
+ build:
  runs-on: ubuntu-latest
 
- steps:
+steps:
   - name: Checkout repository
     uses: actions/checkout@v4
 
@@ -53,7 +52,7 @@ steps:
       tags: |
         ${{ secrets.DOCKER_USERNAME }}/go-web-app:${{ github.run_id }}
         ${{ secrets.DOCKER_USERNAME }}/go-web-app:latest
-        
+
 update-helm-chart:
 runs-on: ubuntu-latest
 needs: push
@@ -61,8 +60,6 @@ needs: push
 steps:
   - name: Checkout repository
     uses: actions/checkout@v4
-    with:
-      token: ${{ secrets.GITHUB_TOKEN }}
 
   - name: Update tag in Helm chart
     run: |
