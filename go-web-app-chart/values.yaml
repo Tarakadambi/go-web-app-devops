@@ -9,7 +9,7 @@ replicaCount: 1
 image:
   repository: clusterstar/go-web-app
   # This sets the pull policy for images.
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "27422483674"
 
