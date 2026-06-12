@@ -43,7 +43,7 @@ jobs:
               context: .
               file: ./Dockerfile        
               push: true
-              tags: 
+              tags: |
                 ${{ secrets.DOCKER_USERNAME }}/go-web-app:${{ github.run_id }}
                 ${{ secrets.DOCKER_USERNAME }}/go-web-app:latest
 
