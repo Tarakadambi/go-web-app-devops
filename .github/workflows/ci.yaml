@@ -2,33 +2,30 @@ name: CI
 
 on:
  push:
- branches:
+  branches:
    - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
 
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v4
+  steps:
+     - name: Checkout repository
+       uses: actions/checkout@v4
 
-  - name: Set up Go
-    uses: actions/setup-go@v5
-    with:
+     - name: Set up Go
+       uses: actions/setup-go@v5
+  with:
       go-version: "1.21"
+     - name: Build
+       run: go build -o go-web-app
 
-  - name: Build
-    run: go build -o go-web-app
-
-  - name: Test
-    run: go test -v ./...
-
+     - name: Test
+       run: go test -v ./...
 
 docker:
 runs-on: ubuntu-latest
 needs: build
-
 
 steps:
   - name: Checkout repository
