@@ -3,16 +3,17 @@ kind: Application
 metadata:
   name: go-web-app-dev
   namespace: argocd
+
 spec:
   project: default
 
-  spec:
   source:
+    repoURL: https://github.com/Tarakadambi/go-web-app-devops.git
+    targetRevision: main
     path: go-web-app-chart
-    helm:
-      valueFiles:
-        - values-dev.yaml
+
   destination:
+    server: https://kubernetes.default.svc
     namespace: dev
 
   syncPolicy:
