@@ -45,7 +45,7 @@ jobs:
               file: ./Dockerfile        
               push: true
               tags: |
-                ${{ secrets.DOCKER_USERNAME }}/go-web-app:${{ github.run_id }}
+                ${{ secrets.DOCKER_USERNAME }}/go-web-app:${{ github.sha }}
                 ${{ secrets.DOCKER_USERNAME }}/go-web-app:latest
 
     update-helm-chart:
