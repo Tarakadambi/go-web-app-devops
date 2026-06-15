@@ -1,5 +1,5 @@
-DevOps GitOps CI/CD Pipeline — Go Web App
-📌 Overview
+**DevOps GitOps CI/CD Pipeline — Go Web App**
+**📌 Overview**
 
 This project demonstrates a complete end-to-end DevOps pipeline using:
 
@@ -37,10 +37,10 @@ Orchestration	Kubernetes (Minikube)
 Packaging	Helm
 Registry	Docker Hub
 
-CI/CD Workflow
-CI (GitHub Actions)
+**CI/CD Workflow
+CI (GitHub Actions)**
 
-On every push to main:
+**On every push to main:**
 
 Build Go application
 Run unit tests
@@ -51,6 +51,7 @@ Watches GitHub repo
 Detects Helm chart changes
 Automatically syncs Kubernetes cluster
 Deploys updated application
+
 **📦 Project Structure**
 go-web-app-devops/
 │
@@ -62,7 +63,20 @@ go-web-app-devops/
 ├── Dockerfile                # Container build
 └── README.md
 📸 Application Screenshots
-🏠 Home Page
+
+## 📸 Application Screenshots
+
+### 🏠 Home Page
+![Home](screenshots/page-home.jpeg)
+
+### 🔍 Argo CD Dashboard (Dev)
+![Argo Dev](screenshots/argocd-dev.jpeg)
+
+### 🔍 Argo CD Dashboard (Stage)
+![Argo Stage](screenshots/argocd-stag.jpeg)
+
+### 🔍 Argo CD Dashboard (Prod)
+![Argo Prod](screenshots/argocd-prod.jpeg)
 
 **🔍 Argo CD Dashboard**
 
@@ -94,6 +108,11 @@ Prod environment
 ✅ Kubernetes Helm deployment
 ✅ Auto rollback capability (Argo CD)
 ✅ Self-healing deployments
+
+## 🌐 Live Application
+
+http://localhost:8080/home
+
 **🧠 What I Learned**
 GitOps workflow using Argo CD
 Kubernetes deployment using Helm
