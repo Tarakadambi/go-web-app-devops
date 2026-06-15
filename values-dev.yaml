@@ -1,3 +1,0 @@
-ingress:
-  enabled: true
-  host: dev.go-web-app.local

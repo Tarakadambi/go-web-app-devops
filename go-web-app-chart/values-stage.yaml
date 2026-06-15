@@ -1,3 +1,0 @@
-ingress:
-  enabled: true
-  host: stage.go-web-app.local
